@@ -40,7 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandCode.cs" />
     <Compile Include="IRCClient.cs" />
+    <Compile Include="IRCClient_EventHandlers.cs" />
+    <Compile Include="IRCClient_IRCCommands.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

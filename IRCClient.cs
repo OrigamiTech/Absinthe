@@ -249,13 +249,15 @@ namespace Absinthe
                 string inputLine;
                 while((inputLine = reader.ReadLine()) != null)
                 {
-                    Console.ForegroundColor = ConsoleColor.Gray;
-                    Console.WriteLine(inputLine);
+                    /*Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.WriteLine(inputLine);*/
 
                     string PREFIX;
                     string COMMAND;
                     string[] PARAMETERS;
                     ParseCommand(inputLine, out PREFIX, out COMMAND, out PARAMETERS);
+
+                    // this is just debug code so I know what's happening
                     Console.ForegroundColor = ConsoleColor.Red;
                     if(PREFIX != "")
                         Console.Write(PREFIX + ' ');
@@ -266,6 +268,7 @@ namespace Absinthe
                     for(int i = 0; i < PARAMETERS.Length; i++)
                         Console.Write(PARAMETERS[i] + ' ');
                     Console.WriteLine();
+
 
                     switch(COMMAND)
                     {
